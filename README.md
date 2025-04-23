@@ -19,12 +19,12 @@ This guide provides step-by-step instructions for generating a dataset using **B
 
 ![Import](images/import.png)
 
-### Step 5: Export the File as `glTF 2.0 (.glb/.gltf)`
-- Once the file is loaded in Blender, go to `File -> Export -> glTF 2.0 (.glb/.gltf)` to export the model in the `glTF` format. _(This step is not necessary for generating the dataset)_
+### Step 5: Export the File as `(.glb)`  _(This step is not necessary for generating the dataset)_
+- Once the file is loaded in Blender, go to `File -> Export -> glTF 2.0 (.glb/.gltf)` to export the model in the `glTF` format.
 
 ![Export](images/export.png)
 
-### Step 6: Export as Wavefront `.obj`
+### Step 6: Export as `.obj` and `.ply`
 - Export the model as `.obj` by selecting `File -> Export -> Wavefront (.obj)` _(This will also create a `.mtl` file)_.
 - Additionally, export the model as `.ply` by selecting `File -> Export -> Stanford (.ply)`.
 
@@ -50,17 +50,20 @@ This guide provides step-by-step instructions for generating a dataset using **B
 ![Folder Format](images/format1.png)  
 ![Folder Format](images/format2.png)
 
----
+<br>
 
 ## Part II – BlenderProc Installation
 
 ### Step 1: Install BlenderProc
 - Create a new folder on your system.
+- Make sure you have [Conda](https://docs.conda.io/en/latest/miniconda.html) installed before proceeding.
+
 - Clone the **BlenderProc** repository by running:
    ```bash
    git clone https://github.com/DLR-RM/BlenderProc.git
    cd BlenderProc
    conda create --name BlenderProc
+   conda activate BlenderProc
    pip install -e .
 
 
@@ -76,7 +79,7 @@ This guide provides step-by-step instructions for generating a dataset using **B
    ```bash
    blenderproc download cc_textures 
 
----
+<br>
 
 ## Part III – Data Generation
 
