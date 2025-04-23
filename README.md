@@ -60,6 +60,7 @@ This guide provides step-by-step instructions for generating a dataset using **B
    ```bash
    git clone https://github.com/DLR-RM/BlenderProc.git
    cd BlenderProc
+   conda create --name BlenderProc
    pip install -e .
 
 
@@ -77,7 +78,7 @@ This guide provides step-by-step instructions for generating a dataset using **B
 
 ---
 
-## Part III – BlenderProc Installation
+## Part III – Data Generation
 
 ### Step 1: Edit model parameters
 
