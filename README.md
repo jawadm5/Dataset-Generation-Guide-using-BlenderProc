@@ -1,6 +1,6 @@
 # Dataset-Generation-Guide-using-BlenderProc
 
-This guide provides step-by-step instructions for generating a dataset using **Blender** and **BlenderProc**. The process involves scanning an object, converting it to a suitable format, installing necessary tools, and running the dataset generation pipeline.
+This guide provides step-by-step instructions for generating a dataset using **Blender** and **BlenderProc**. The process involves scanning an object, converting it to a suitable format, installing necessary tools, and running the dataset generation pipeline. _BlenderProc version 2.8.0_.
 
 ## Part I – File Preparation
 
@@ -44,8 +44,8 @@ This guide provides step-by-step instructions for generating a dataset using **B
 ![Baking](images/baking.png)
 
 ### Step 9: Prepare Folder in BOP Format
-- Create a folder in the **BOP** format. Update the `models_info.json` file to include the dimensions of your object. 
-- Refer to the sample folder structure for guidance.
+- Create a folder and update to correspond to the **BOP** format. Update the `models_info.json` file to include the dimensions of your object. 
+- Refer to the sample folder structure for guidance (Husky and RedRobot).
 
 ![Folder Format](images/format1.png)  
 ![Folder Format](images/format2.png)
@@ -62,7 +62,7 @@ This guide provides step-by-step instructions for generating a dataset using **B
    ```bash
    git clone https://github.com/DLR-RM/BlenderProc.git
    cd BlenderProc
-   conda create --name BlenderProc
+   conda create --name BlenderProc python=3.10
    conda activate BlenderProc
    pip install -e .
 
@@ -77,7 +77,7 @@ This guide provides step-by-step instructions for generating a dataset using **B
 ### Step 3: Download the CC textures (requires good internet):
 - Run:
    ```bash
-   blenderproc download cc_textures 
+   blenderproc download cc_textures <your output_dir>
 
 <br>
 
@@ -85,7 +85,7 @@ This guide provides step-by-step instructions for generating a dataset using **B
 
 ### Step 1: Edit model parameters
 
-- Open `/home/vrl123werdfg/blender/blender-4.2.1-linux-x64/custom-python-packages/lib/python3.11/site-packages/bop_toolkit_lib/dataset_params.py`
+- Open `blender/blender-4.2.1-linux-x64/custom-python-packages/lib/python3.11/site-packages/bop_toolkit_lib/dataset_params.py`
 - In the function `get_model_params()`, edit the dicts `obj_ids` and `symmetric_obj_ids`, add:
     ```python
     "MyDatasetName": [1],
