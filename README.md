@@ -112,6 +112,8 @@ This guide provides step-by-step instructions for generating a dataset using **B
 - Add this file to the BlenderProc repo
 
 ### Step 3: Edit the data generation file
+- Open the run.sh file
+- Edit the number of epochs and the name of the file you want to run
 - Open terminal in the location where you saved the run.sh
 - Run:
    ```bash
@@ -119,6 +121,8 @@ This guide provides step-by-step instructions for generating a dataset using **B
    ./run.sh
 - Your dataset will start generating and you will be ready in the output directory
 
+![Folder Format](images/run.png)
+<br>
 
 ### Step 4: Fine-Tuning & Optimization
 - Inspect generated images and annotations in the output folder.
